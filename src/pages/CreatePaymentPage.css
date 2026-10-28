@@ -1,0 +1,250 @@
+
+.create-payment-page {
+  min-height: 100vh;
+  background: #f4f7f3;
+  color: #14291b;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.create-payment-page * {
+  box-sizing: border-box;
+}
+
+.create-payment-page button,
+.create-payment-page input,
+.create-payment-page select {
+  font: inherit;
+}
+
+.create-payment-page button {
+  cursor: pointer;
+}
+
+.create-payment-page button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.create-payment-header {
+  padding: 24px 5%;
+  background: #fff;
+  border-bottom: 1px solid #e3eae2;
+}
+
+.create-payment-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: #42634a;
+  font-size: 13px;
+}
+
+.create-payment-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.create-payment-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #edfae6;
+  color: #2c6837;
+}
+
+.create-payment-title h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.create-payment-title p {
+  margin: 7px 0 0;
+  color: #7b887e;
+  font-size: 13px;
+}
+
+.create-payment-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.create-payment-card,
+.create-payment-result {
+  padding: 28px;
+  border: 1px solid #e0e9de;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgb(20 45 25 / 3%);
+}
+
+.create-payment-card h2,
+.create-payment-result h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.create-payment-card > p {
+  margin: 8px 0 24px;
+  color: #7b887e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.create-payment-card label {
+  display: block;
+  margin: 18px 0 9px;
+  color: #425448;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.create-payment-card input,
+.create-payment-card select {
+  min-height: 46px;
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #dce6dc;
+  border-radius: 9px;
+  outline-color: #9bd37b;
+  background: #fff;
+  color: #183322;
+  font-size: 14px;
+}
+
+.create-payment-card input:focus,
+.create-payment-card select:focus {
+  border-color: #9bd37b;
+  box-shadow: 0 0 0 3px rgb(155 211 123 / 14%);
+}
+
+.create-payment-amount-row {
+  display: flex;
+  gap: 12px;
+}
+
+.create-payment-amount-row select {
+  width: 130px;
+  flex-shrink: 0;
+}
+
+.create-payment-amount-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.create-payment-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 24px;
+  padding: 12px 16px;
+  border: 1px solid #bfff83;
+  border-radius: 10px;
+  background: #bfff83;
+  color: #142b19;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.create-payment-submit:hover:not(:disabled) {
+  background: #a9f467;
+}
+
+.create-payment-secure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: #718076;
+  font-size: 12px;
+  text-align: center;
+}
+
+.create-payment-secure-note svg {
+  flex-shrink: 0;
+  color: #3c7946;
+}
+
+.create-payment-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 13px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.create-payment-alert svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.create-payment-alert.error {
+  border: 1px solid #f0caca;
+  background: #fff4f4;
+  color: #a52828;
+}
+
+.create-payment-alert.success {
+  border: 1px solid #dcebd6;
+  background: #f0f8ec;
+  color: #31643a;
+}
+
+.create-payment-result {
+  margin-top: 20px;
+}
+
+.create-payment-result p {
+  margin: 15px 0 0;
+  color: #617064;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.create-payment-result strong {
+  color: #1e4028;
+}
+
+@media (max-width: 600px) {
+  .create-payment-header {
+    padding: 20px 18px;
+  }
+
+  .create-payment-title h1 {
+    font-size: 23px;
+  }
+
+  .create-payment-content {
+    padding: 20px 14px;
+  }
+
+  .create-payment-card,
+  .create-payment-result {
+    padding: 20px;
+  }
+
+  .create-payment-amount-row {
+    gap: 8px;
+  }
+
+  .create-payment-amount-row select {
+    width: 105px;
+  }
+}

@@ -1,0 +1,544 @@
+
+.settings-page {
+  min-height: 100vh;
+  background: #f4f7f3;
+  color: #14291b;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.settings-page * {
+  box-sizing: border-box;
+}
+
+.settings-page button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.settings-header {
+  padding: 24px 5%;
+  background: #fff;
+  border-bottom: 1px solid #e3eae2;
+}
+
+.settings-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: #42634a;
+  font-size: 13px;
+}
+
+.settings-heading {
+  margin-top: 20px;
+}
+
+.settings-heading h1 {
+  margin: 0;
+  font-size: 29px;
+  letter-spacing: -0.6px;
+}
+
+.settings-heading p {
+  margin: 7px 0 0;
+  color: #7b887e;
+  font-size: 13px;
+}
+
+.settings-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 24px;
+}
+
+.settings-section-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 28px 0 14px;
+  color: #356b40;
+}
+
+.settings-section-title:first-child {
+  margin-top: 0;
+}
+
+.settings-section-title h2 {
+  margin: 0;
+  color: #183322;
+  font-size: 18px;
+}
+
+.settings-section-title p {
+  margin: 6px 0 0;
+  color: #7b887e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.settings-card {
+  overflow: hidden;
+  border: 1px solid #e0e9de;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgb(20 45 25 / 3%);
+}
+
+.settings-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 23px;
+}
+
+.settings-avatar {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #bfff83;
+  color: #142b19;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.settings-profile-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  min-width: 0;
+}
+
+.settings-label {
+  color: #7b887e;
+  font-size: 12px;
+}
+
+.settings-profile-info strong {
+  max-width: 100%;
+  color: #203b29;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.settings-account-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #267444;
+  font-size: 11px;
+}
+
+.settings-readonly-badge {
+  padding: 7px 10px;
+  border-radius: 20px;
+  background: #edf7e8;
+  color: #3e7043;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.settings-preferences-card {
+  padding: 0 23px;
+}
+
+.settings-preference-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 21px 0;
+  border-bottom: 1px solid #edf0ec;
+}
+
+.settings-preference-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #eff8e9;
+  color: #356b40;
+}
+
+.settings-preference-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.settings-preference-copy strong,
+.settings-security-info strong {
+  display: block;
+  color: #253b2b;
+  font-size: 13px;
+}
+
+.settings-preference-copy p,
+.settings-security-info p {
+  margin: 6px 0 0;
+  color: #7b887e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Toggle switches */
+.settings-switch {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 46px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.settings-switch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.settings-switch-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: #dce4dc;
+  transition: background 0.2s ease;
+}
+
+.settings-switch-track::before {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 15%);
+  content: "";
+  transition: transform 0.2s ease;
+}
+
+.settings-switch input:checked + .settings-switch-track {
+  background: #67ad4c;
+}
+
+.settings-switch input:checked + .settings-switch-track::before {
+  transform: translateX(20px);
+}
+
+.settings-switch input:focus-visible + .settings-switch-track {
+  outline: 3px solid rgb(103 173 76 / 25%);
+  outline-offset: 2px;
+}
+
+.settings-save-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.settings-saved-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #267444;
+  font-size: 12px;
+}
+
+.settings-primary-button,
+.settings-logout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 41px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.settings-primary-button {
+  border: 1px solid #bfff83;
+  background: #bfff83;
+  color: #142b19;
+}
+
+.settings-primary-button:hover {
+  background: #a9f467;
+}
+
+.settings-security-card {
+  padding: 23px;
+}
+
+.settings-security-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.settings-info-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 21px;
+  padding: 13px;
+  border: 1px solid #e4e9d8;
+  border-radius: 9px;
+  background: #fafbf3;
+  color: #69744c;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.settings-info-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.settings-logout-button {
+  margin-top: 20px;
+  border: 1px solid #f0cece;
+  background: #fff;
+  color: #b4232d;
+}
+
+.settings-logout-button:hover {
+  background: #fff4f4;
+}
+
+@media (max-width: 600px) {
+  .settings-header {
+    padding: 20px 18px;
+  }
+
+  .settings-heading h1 {
+    font-size: 24px;
+  }
+
+  .settings-content {
+    padding: 22px 14px;
+  }
+
+  .settings-profile-card {
+    padding: 17px;
+    flex-wrap: wrap;
+  }
+
+  .settings-readonly-badge {
+    margin-left: 70px;
+  }
+
+  .settings-preferences-card {
+    padding: 0 16px;
+  }
+
+  .settings-preference-row {
+    gap: 10px;
+  }
+
+  .settings-preference-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .settings-preference-copy p {
+    font-size: 11px;
+  }
+
+  .settings-security-card {
+    padding: 17px;
+  }
+
+  .settings-save-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-primary-button {
+    width: 100%;
+  }
+}
+
+.settings-account-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.settings-password-button,
+.settings-delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.settings-password-button {
+  border: 1px solid #cfe4c8;
+  background: #f4faef;
+  color: #286c39;
+}
+
+.settings-password-button:hover {
+  background: #e8f6df;
+  border-color: #9fc994;
+}
+
+.settings-delete-button {
+  border: 1px solid #f0cece;
+  background: #fff;
+  color: #b4232d;
+}
+
+.settings-delete-button:hover {
+  background: #fff4f4;
+  border-color: #e7aaaa;
+}
+
+.settings-password-button:focus-visible,
+.settings-delete-button:focus-visible,
+.settings-cancel-button:focus-visible,
+.settings-delete-confirm-button:focus-visible {
+  outline: 3px solid rgb(103 173 76 / 25%);
+  outline-offset: 3px;
+}
+
+.settings-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(10 25 15 / 55%);
+}
+
+.settings-delete-modal {
+  width: 100%;
+  max-width: 440px;
+  padding: 28px;
+  border: 1px solid #e4e9e2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 20px 70px rgb(0 0 0 / 20%);
+}
+
+.settings-delete-icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  background: #fff0f0;
+  color: #b4232d;
+}
+
+.settings-delete-modal h2 {
+  margin: 0;
+  color: #183322;
+  font-size: 22px;
+}
+
+.settings-delete-modal p {
+  margin: 12px 0 0;
+  color: #6f7d72;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.settings-delete-modal .settings-delete-warning {
+  padding: 12px;
+  border: 1px solid #f0d6bd;
+  border-radius: 9px;
+  background: #fff9f2;
+  color: #88541f;
+  font-size: 12px;
+}
+
+.settings-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.settings-cancel-button,
+.settings-delete-confirm-button {
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.settings-cancel-button {
+  border: 1px solid #dce5db;
+  background: #fff;
+  color: #344b39;
+}
+
+.settings-cancel-button:hover {
+  background: #f5f8f4;
+}
+
+.settings-delete-confirm-button {
+  border: 1px solid #b4232d;
+  background: #b4232d;
+  color: #fff;
+}
+
+.settings-delete-confirm-button:hover {
+  background: #941b24;
+}
+
+@media (max-width: 600px) {
+  .settings-account-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .settings-password-button,
+  .settings-delete-button {
+    width: 100%;
+  }
+
+  .settings-delete-modal {
+    padding: 22px;
+  }
+
+  .settings-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .settings-cancel-button,
+  .settings-delete-confirm-button {
+    width: 100%;
+  }
+}
