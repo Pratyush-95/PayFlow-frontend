@@ -23,8 +23,6 @@ Expected endpoints in this starter:
 
 If your backend DTO field names or endpoint paths differ, adjust `src/pages/LoginPage.jsx`, `SignupPage.jsx`, and `VerifyOtpPage.jsx`.
 
-The dashboard transaction list and metrics are **sample UI data**, not live backend data. Connect real transaction and stats endpoints before using it as a real merchant dashboard.
-
 ## Security notes
 
 - Do not put Razorpay key secrets, webhook secrets, database passwords, or JWT signing secrets in frontend code.
